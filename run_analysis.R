@@ -17,12 +17,6 @@ activity <- read.table("activity_labels.txt")
 test <- cbind(subTest, y_test, x_test)
 train <- cbind(subTrain, y_train, x_train)
 
-# We need to differintiate between "test" subject 1
-#       and "train" subject 1.
-
-test[,1] <- test[,1] + 100
-
-
 # Combine "test" and "train"
 df <- rbind(test,train)
 
